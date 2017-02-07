@@ -35,10 +35,39 @@
 
 //Exercise 3
 
-var height = 8;
-var length = 8;
+var height = 1;
+var length = 1;
+var size = 20;
+var line = "";
 
-while 
+while (height <= size) {
+	if (height % 2 != 0) {
+		while (length <= size) {
+			if (length %2 != 0) {
+				line += "||";
+			} else {
+				line += "#"
+			}
+			length++;
+		}
+		console.log(line);
+	} else {
+		while (length <= size) {
+			if (length %2 != 0) {
+				line += "#";
+			} else {
+				line += "||"
+			}
+			length++;
+		}
+		console.log(line);
+	}
+	height++;
+	line = "";
+	length = 1;
+}
+
+
 
 
 </script>
