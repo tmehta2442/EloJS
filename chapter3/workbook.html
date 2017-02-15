@@ -16,29 +16,69 @@
 // console.log("f2 = " + x);
 
 
+// var landscape = function() {
+// 	var result = "";
+// 	var flat = function(size) {
+// 		for (var count = 0; count < size; count++) {
+// 			result += "_";
+// 		}
+// 	};
+
+// 	var mountain = function(size) {
+// 		result +="/";
+// 		for (var count = 0; count < size; count++) {
+// 			result += "'";
+// 		}
+// 		result += "\\";
+// 	};
+
+// 	flat(3);
+// 	mountain(4);
+// 	flat(6);
+// 	mountain(1);
+// 	flat(1)
+// 	return result;
+// }
+
+// console.log(landscape());
+
+
+
+// ___/######\___|||||......
+
+
 var landscape = function() {
 	var result = "";
 	var flat = function(size) {
 		for (var count = 0; count < size; count++) {
-			result += "_";
+			result +="_ ";
 		}
-	};
-
+	}
 	var mountain = function(size) {
-		result +="/";
+		result += "/";
 		for (var count = 0; count < size; count++) {
-			result += "'";
+			result += "#"
 		}
 		result += "\\";
-	};
+	}
+	var trees = function(size) {
+		for (var count = 0; count < size; count++) {
+			result += "|"
+		}
+	}
+	var ocean = function(size) {
+		for (var count = 0; count < size; count++) {
+			result += "."
+		}
+	}
 
 	flat(3);
-	mountain(4);
-	flat(6);
-	mountain(1);
-	flat(1)
+	mountain(6);
+	flat(8);
+	trees(8);
+	ocean(10);
 	return result;
-}
+};
 
 console.log(landscape());
 </script>
