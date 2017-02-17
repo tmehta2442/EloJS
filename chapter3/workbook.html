@@ -47,38 +47,56 @@
 // ___/######\___|||||......
 
 
-var landscape = function() {
-	var result = "";
-	var flat = function(size) {
-		for (var count = 0; count < size; count++) {
-			result +="_ ";
-		}
-	}
-	var mountain = function(size) {
-		result += "/";
-		for (var count = 0; count < size; count++) {
-			result += "#"
-		}
-		result += "\\";
-	}
-	var trees = function(size) {
-		for (var count = 0; count < size; count++) {
-			result += "|"
-		}
-	}
-	var ocean = function(size) {
-		for (var count = 0; count < size; count++) {
-			result += "."
-		}
-	}
+// var landscape = function() {
+// 	var result = "";
+// 	var flat = function(size) {
+// 		for (var count = 0; count < size; count++) {
+// 			result +="_ ";
+// 		}
+// 	}
+// 	var mountain = function(size) {
+// 		result += "/";
+// 		for (var count = 0; count < size; count++) {
+// 			result += "#"
+// 		}
+// 		result += "\\";
+// 	}
+// 	var trees = function(size) {
+// 		for (var count = 0; count < size; count++) {
+// 			result += "|"
+// 		}
+// 	}
+// 	var ocean = function(size) {
+// 		for (var count = 0; count < size; count++) {
+// 			result += "."
+// 		}
+// 	}
 
-	flat(3);
-	mountain(6);
-	flat(8);
-	trees(8);
-	ocean(10);
-	return result;
-};
+// 	flat(3);
+// 	mountain(6);
+// 	flat(8);
+// 	trees(8);
+// 	ocean(10);
+// 	return result;
+// };
 
-console.log(landscape());
+// console.log(landscape());
+
+// function power(base, exponent) {
+// 	if (exponent == 0) {
+// 		return 1;
+// 	} else {
+// 		return base * power(base, exponent - 1)
+// 		console.log(power());
+// 	}
+// }
+
+// console.log(power(2,3));
+
+// how that is run:
+
+// return 2 * power(2, 3-1)
+// then
+// return 2 * (2 * 2) = 8
+
 </script>
