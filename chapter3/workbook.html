@@ -100,20 +100,53 @@
 // return 2 * (2 * 2) = 8
 
 
-function findSolution(target) {
-	function find(start, history) {
-		if (start == target) {
-			return history;
-		} else if (start > target) {
-			return null
-		} else {
-			return 	find(start + 5, "(" + history + " + 5)") ||
-							find(start * 3, "(" + history + " * 3)");
-		}
+// function findSolution(target) {
+// 	function find(start, history) {
+// 		if (start == target) {
+// 			return history;
+// 		} else if (start > target) {
+// 			return null
+// 		} else {
+// 			return 	find(start + 5, "(" + history + " + 5)") ||
+// 							find(start * 3, "(" + history + " * 3)");
+// 		}
+// 	}
+// 	return find(1, "1");
+// }
+
+// console.log(findSolution(24));
+
+
+// function printFarmInventory(cows, chickens) {
+// 	var cowString = String(cows);
+// 	var chickenString = String(chickens);
+// 	while (cowString.length < 3) {
+// 		cowString = "0" + cowString;
+// 	}
+// 	while (chickenString.length < 3) {
+// 		chickenString = "0" + chickenString;
+// 	}
+
+// 	console.log(cowString);
+// 	console.log(chickenString);
+// }
+
+// printFarmInventory(7, 11);
+
+
+function zeroPad(number, width) {
+	var string = String(number);
+	while (string.length < 3) {
+		string = "0" + string
 	}
-	return find(1, "1");
+	return string;
 }
 
-console.log(findSolution(24));
+function printFarmInventory (zeros, cows, chickens, pigs) {
+	console.log(zeroPad(cows, zeros) + " cows");
+	console.log(zeroPad(chickens, zeros) + " chickens");
+	console.log(zeroPad(pigs, zeros) + " pigs");
+}
 
+printFarmInventory(3, 7, 11, 200)
 </script>
