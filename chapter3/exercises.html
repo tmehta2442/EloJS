@@ -1,0 +1,38 @@
+<script>
+// function min(first, second) {
+// 	if (first >= second) {
+// 		return first;
+// 	} else {
+// 		return second;
+// 	}
+// }
+
+// console.log(min(0, 10));
+
+// function isEven(number) {
+// 	if (number == 0){
+// 		return true;
+// 	} else if (number == 1) {
+// 		return false
+// 	} else if (number < 0) {
+// 		return isEven(number * (-1));
+// 	} else {
+// 		return isEven(number -2);
+// 	}
+// }
+
+// console.log(isEven(-10));
+
+function countBs(stringT, test){
+	var count = 0;
+	for (var countString = stringT.length; countString >= 0; countString--) {
+		if (stringT.charAt(countString) == test) {
+			count++;
+		}
+	}
+	return count;
+}
+
+console.log(countBs("kakkerlak", "k"));
+
+</script>
