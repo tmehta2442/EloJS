@@ -104,21 +104,27 @@ var JOURNAL = [
   {"events":["cauliflower","peanuts","brushed teeth","weekend"],"squirrel":false}
 ];
 
-function hasEvent(event, entry) {
-  return entry.events.indexOf(event) != -1;
-}
+// function hasEvent(event, entry) {
+//   return entry.events.indexOf(event) != -1;
+// }
 
-function tableFor(event, journal) {
-  var table = [0, 0, 0, 0];
-  for (var i = 0; i < journal.length; i++) {
-    var entry = journal[i];
-    var index = 0;
-    if (hasEvent(event, entry)) index += 1;
-    if (entry.squirrel) index += 2;
-    table[index] += 1;
-  }
-  return table;
-}
+// function tableFor(event, journal) {
+//   var table = [0, 0, 0, 0];
+//   for (var i = 0; i < journal.length; i++) {
+//     var entry = journal[i];
+//     var index = 0;
+//     if (hasEvent(event, entry)) index += 1;
+//     if (entry.squirrel) index += 2;
+//     table[index] += 1;
+//   }
+//   return table;
+// }
 
-console.log(tableFor("bread", JOURNAL));
+// console.log(tableFor("bread", JOURNAL));
+
+function remove(array, index) {
+  return array.slice(0, index)
+    .concat(array.slice(index + 1));
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
 </script>
