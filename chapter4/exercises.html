@@ -1,0 +1,63 @@
+<script>
+// var array = [];
+// var total = 0;
+
+// function range(start, end){
+// 	for (var highNum = end; highNum >= start; highNum--) {
+// 		array.push(highNum);
+// 	}
+// 	return array;
+// }
+
+// function sum(arrayNum) {
+// 	for (var i = 0; i < arrayNum.length; i++) {
+// 		total += arrayNum[i];
+// 	}
+// 	console.log(total);
+// }
+
+// range(1, 10);
+// sum(array)
+
+var array = [];
+var total = 0;
+
+function range(start, end, step){
+	if (step == undefined) {
+		for (var highNum = end; highNum >= start; highNum--) {
+			array.unshift(highNum);
+		}
+	} else if (step >= 0) {
+		for (var highNum = end; highNum >= start; highNum) {
+			array.unshift(highNum);
+			highNum - step;
+		}
+	} else {
+		for (var highNum = end; highNum <= start; highNum++) {
+			array.unshift(highNum);
+		}		
+	}
+	console.log(array);
+}
+
+function sum(arrayNum) {
+	for (var i = 0; i < arrayNum.length; i++) {
+		total += arrayNum[i];
+	}
+	console.log(total);
+}
+
+// range(1, 10, 2);
+// sum(array)
+
+
+// function range(start, end) {
+// 	var array = [];
+// 	for (var highNum = end; highNum >= start; highNum--) {
+// 		array.push(highNum);
+// 	}
+// 	return array;
+// }
+
+// function sum(){};
+</script>
